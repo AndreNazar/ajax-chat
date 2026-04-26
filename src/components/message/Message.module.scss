@@ -1,0 +1,15 @@
+.message_item {
+    display: flex;
+    align-items: flex-start;
+    gap: .5em;
+
+    .username {
+        font-weight: bold;
+    }
+
+    .time {
+        text-wrap: nowrap;
+    }
+
+    .message {}
+}
