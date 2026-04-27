@@ -64,9 +64,6 @@ function App() {
     }
   }, [])
 
-  console.log(isLoading)
-  console.log(isConnected)
-
   if (isLoading) {
     return <div>Загрузка...</div>
   }
