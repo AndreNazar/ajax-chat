@@ -3,7 +3,7 @@ const WebSocket = require("ws")
 const fs = require("fs")
 const path = require("path")
 
-const DB = path.resolve(__dirname, "../messages.json")
+const DB = path.resolve(__dirname, "./messages.json")
 
 const server = http.createServer((req, res) => {
   res.writeHead(200)
