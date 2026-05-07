@@ -1,1 +1,1 @@
-export const WS_URL = "wss://magazine-political-soundtrack-belfast.trycloudflare.com"
+export const WS_URL = "wss://perform-causes-bend-africa.trycloudflare.com"
