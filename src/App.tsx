@@ -17,9 +17,10 @@ function App() {
   })
   const [userList, setUserList] = useState<User[]>([])
   const [messageList, setMessageList] = useState<MessageType[]>([])
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [isConnected, setIsConnected] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
+
+  console.log(isConnected)
 
   useEffect(() => {
     let isActive = true
