@@ -11,8 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
-server/deploy.js
-server/host.js
+server/
 
 # Editor directories and files
 .vscode/*
