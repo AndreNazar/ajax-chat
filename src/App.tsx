@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     let isActive = true
-    const ws = new WebSocket("wss://valid-heads-caught-intimate.trycloudflare.com")
+    const ws = new WebSocket("wss://needed-mission-gregory-celebration.trycloudflare.com")
 
     wsRef.current = ws
 

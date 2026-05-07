@@ -1,10 +1,16 @@
-const WebSoket = require("ws")
+const http = require("http")
+const WebSocket = require("ws")
 const fs = require("fs")
 const path = require("path")
 
 const DB = path.resolve(__dirname, "../messages.json")
 
-const wss = new WebSoket.Server({ port: 8080 })
+const server = http.createServer((req, res) => {
+  res.writeHead(200)
+  res.end("ws server")
+})
+
+const wss = new WebSocket.Server({ server })
 
 const users = new Map()
 let messages = []
@@ -15,7 +21,7 @@ function broadcastUsers() {
   const list = Array.from(users.values())
 
   wss.clients.forEach((client) => {
-    if (client.readyState === WebSoket.OPEN) {
+    if (client.readyState === WebSocket.OPEN) {
       client.send(
         JSON.stringify({
           type: "users",
@@ -76,7 +82,7 @@ wss.on("connection", (ws, req) => {
       fs.writeFileSync(DB, JSON.stringify(messages))
 
       wss.clients.forEach((client) => {
-        if (client.readyState === WebSoket.OPEN) {
+        if (client.readyState === WebSocket.OPEN) {
           client.send(JSON.stringify(message))
         }
       })
@@ -88,4 +94,8 @@ wss.on("connection", (ws, req) => {
     users.delete(ws)
     broadcastUsers()
   })
+})
+
+server.listen(8080, () => {
+  console.log("server started")
 })
