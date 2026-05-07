@@ -1,1 +1,1 @@
-export const WS_URL = "wss://examined-administration-lamps-columns.trycloudflare.com"
+export const WS_URL = "wss://bent-nec-distributions-settled.trycloudflare.com"

@@ -68,23 +68,23 @@ function App() {
   if (isLoading) {
     return <div>Загрузка...</div>
   }
-  if (!isConnected) {
-    return <div>У разработчика выключен компьютер, поэтому ничего не работает и писать сообщения нельзя...</div>
-  } else {
-    return (
-      <div className={styles.app_container}>
-        <h1>ЧАТ</h1>
-        <div className={styles.chat_content}>
-          <FormInfo wsRef={wsRef} user={user} setUser={setUser} />
-          <div className={styles.main_lists}>
-            <MessagesList messageList={messageList} />
-            <UsersList userList={userList} />
-          </div>
-          <FormMessage wsRef={wsRef} />
+  // if (!isConnected) {
+  //   return <div>У разработчика выключен компьютер, поэтому ничего не работает и писать сообщения нельзя...</div>
+  // } else {
+  return (
+    <div className={styles.app_container}>
+      <h1>ЧАТ</h1>
+      <div className={styles.chat_content}>
+        <FormInfo wsRef={wsRef} user={user} setUser={setUser} />
+        <div className={styles.main_lists}>
+          <MessagesList messageList={messageList} />
+          <UsersList userList={userList} />
         </div>
+        <FormMessage wsRef={wsRef} />
       </div>
-    )
-  }
+    </div>
+  )
 }
+// }
 
 export default App
