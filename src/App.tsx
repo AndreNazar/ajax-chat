@@ -5,6 +5,7 @@ import FormMessage from "./components/formmessage/FormMessage"
 import MessagesList from "./components/messages-list/MessagesList"
 import UsersList from "./components/users-list/UsersList"
 import styles from "./App.module.scss"
+import { WS_URL } from "../config"
 
 const STATIC_USER: User = { name: "(аноним)", color: "#cccccc" }
 
@@ -21,7 +22,7 @@ function App() {
 
   useEffect(() => {
     let isActive = true
-    const ws = new WebSocket("wss://needed-mission-gregory-celebration.trycloudflare.com")
+    const ws = new WebSocket(WS_URL)
 
     wsRef.current = ws
 
