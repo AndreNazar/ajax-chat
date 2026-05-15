@@ -1,1 +1,1 @@
-export const WS_URL = "wss://5f16b396c0d67f.lhr.life";
+export const WS_URL = "wss://eab774abd531ae.lhr.life";
